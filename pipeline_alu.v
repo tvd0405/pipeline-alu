@@ -7,7 +7,10 @@ module pipeline_alu (
 );
 	reg signed [8:0] reg_a;
 	reg signed [8:0] reg_b; 
+	reg signed [8:0] reg_ad;
+	reg signed [8:0] reg_bd; 
 	reg signed [9:0] reg_add;
+	reg signed [9:0] reg_addd;
 	reg signed [9:0] reg_sub; 
 	reg signed [19:0] reg_mult;
 
@@ -23,9 +26,12 @@ module pipeline_alu (
 		end else begin
 			reg_a <= a;
 			reg_b <= b;
+			reg_ad <= reg_a;
+			reg_bd <= reg_b;
 			reg_add <= reg_a + reg_b;
-			reg_sub <= reg_a - reg_b;				
-			reg_mult <= reg_add * reg_sub;
+			reg_addd <= reg_add;
+			reg_sub <= reg_ad - reg_bd;				
+			reg_mult <= reg_addd * reg_sub;
 		end
 	end
 endmodule

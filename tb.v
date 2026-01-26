@@ -13,7 +13,7 @@ module tb;
 	always @(posedge clk or posedge rst) begin
 		if (rst)
 			count = 0;
-		else if (count < 3)
+		else if (count < 4)
 				count = count + 1;
 			else
 				#0.011 actual.push_front(out_res);

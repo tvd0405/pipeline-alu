@@ -9,5 +9,5 @@
     "//FP_SIZING": "absolute",
     "FP_PDN_VOFFSET": 50,  
     "FP_PDN_HOFFSET": 50,
-    "FP_CORE_UTIL": 80
+    "FP_CORE_UTIL": 90
 }
