@@ -9,5 +9,6 @@
     "//FP_SIZING": "absolute",
     "FP_PDN_VOFFSET": 50,  
     "FP_PDN_HOFFSET": 50,
+    "MAX_TRANSITION_CONSTRAINT": 1.5,
     "FP_CORE_UTIL": 80
 }
