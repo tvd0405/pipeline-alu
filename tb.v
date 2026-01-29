@@ -1,12 +1,12 @@
 `timescale 1ns/10ps
 module tb;
-	reg [23:0] in_a, in_b;
-	wire [47:0] out_res;
+	reg [31:0] in_a, in_b;
+	wire [63:0] out_res;
 	reg clk, rst;
-	reg [47:0] expected[$], actual[$];
+	reg [63:0] expected[$], actual[$];
 	
 	pipeline_alu dut(
-		clk, rst, in_a, in_b, out_res
+		clk, in_a, in_b, out_res
 	);
 
 	reg [3:0] count;
