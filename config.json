@@ -6,13 +6,44 @@
     "PL_RESIZER_SETUP_SLACK_MARGIN": 2.0,  
     "GRT_RESIZER_SETUP_SLACK_MARGIN": 2.0,
     "SYNTH_STRATEGY": "DELAY 2",
-    "//MAX_FANOUT_CONSTRAINT": 11,
-    "//DIE_AREA": [0, 0, 760, 760],
-    "//FP_SIZING": "absolute",
+    "MAX_FANOUT_CONSTRAINT": 8,
+    "DIE_AREA": [0, 0, 500, 750],
+    "FP_SIZING": "absolute",
     "MAX_TRANSITION_CONSTRAINT": 1.5,
 	"MAX_CAPACITANCE_CONSTRAINT": 0.4,
 	"GRT_ANTENNA_ITERS": 10,
 	"RUN_HEURISTIC_DIODE_INSERTION": true,
+    "//PL_RESIZER_HOLD_SLACK_MARGIN": 1.5,  
+    "//GRT_RESIZER_HOLD_SLACK_MARGIN": 1.5,
+    "FP_PDN_VOFFSET": 60,  
+    "FP_PDN_HOFFSET": 60,
 	"//STA_CORNERS": ["max_ss_100C_1v60", "min_ff_n40C_1v95"],
-    "FP_CORE_UTIL": 60
+    "//FP_CORE_UTIL": 60,
+	"MACROS": {
+		"mult8x8": {
+			"gds": ["dir::macro/gds/mult8x8.gds"],
+			"lef": ["dir::macro/lef/mult8x8.lef"],
+			"lib": {
+				"*": ["dir::macro/lib/max_ss_100C_1v60/mult8x8__max_ss_100C_1v60.lib"]
+			},
+			"instances": {
+				"mult_i.mult_1": {
+					"location": [50, 50],
+					"orientation": "N"
+				},
+				"mult_i.mult_2": {
+					"location": [50, 225],
+					"orientation": "N"
+				},
+				"mult_i.mult_3": {
+					"location": [50, 400],
+					"orientation": "N"
+				},
+				"mult_i.mult_4": {
+					"location": [50, 575],
+					"orientation": "N"
+				}
+			}
+		}
+	}
 }
